@@ -6,6 +6,7 @@
     "mongoose": ">= 3.8.12",
     "passport": ">= 0.2.0",
     "socket.io": ">= 1.0.6",
-    "body-parser": ">= 1.4.3"
+    "body-parser": ">= 1.4.3",
+    "method-override": ">= 2.1.1"
   }
 }

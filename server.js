@@ -1,4 +1,6 @@
 var express = require("express");
+var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
 var app = express();
 var http = require('http').Server(app);
 var socketio = require("socket.io")(http);
@@ -9,11 +11,10 @@ global.mongoose  = require('mongoose');
 global.db = mongoose.connect('mongodb://localhost/boomroom');
 
 //config
-app.use(express.bodyParser());
-app.use(express.methodOverride());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(methodOverride());
 app.use(express.static(__dirname + '/public'));
 
-app.listen(3000, function(){
+app.listen(8000, function(){
 	console.log("listening on port 8000");
-})
-
+});
