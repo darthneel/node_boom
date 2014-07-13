@@ -1,0 +1,9 @@
+{
+  "name": "node_boom",
+  "description": "Boom Room on Node and Backbone",
+  "dependencies": {
+    "express": ">= 4.6.1",
+    "mongoose": ">= 3.8.12",
+    "passport": ">= 0.2.0"
+  }
+}
