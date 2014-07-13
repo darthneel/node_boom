@@ -9,7 +9,7 @@ global.mongoose  = require('mongoose');
 global.db = mongoose.connect('mongodb://localhost/boomroom');
 
 //config
-// app.use(express.bodyParser());
+app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(express.static(__dirname + '/public'));
 
