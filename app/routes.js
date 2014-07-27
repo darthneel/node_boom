@@ -2,7 +2,11 @@ module.exports = function(app, passport) {
 
   //worked
   app.get('/worked', function(req, res) {
-    res.send('<h1> WORKED </h1>');
+    if(req.user) {
+      res.send('<h1> WORKED </h1><h2>' + req.user.email + '</h2>');
+    } else {
+      res.send('<h1> WORKED </h1>');
+    }
   });
 
   // login
