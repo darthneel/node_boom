@@ -17,4 +17,4 @@ var songSchema = new Schema({
   updated: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('Song', songSchema);
+module.exports = db.model('Song', songSchema);

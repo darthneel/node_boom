@@ -13,4 +13,4 @@ var roomSchema = new Schema({
   updated: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('Room', roomSchema);
+module.exports = db.model('Room', roomSchema);
