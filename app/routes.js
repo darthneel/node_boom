@@ -1,19 +1,24 @@
 module.exports = function(app, passport) {
 
-//worked
+  //worked
   app.get('/worked', function(req, res) {
     res.send('<h1> WORKED </h1>');
   });
 
-// login
+  // login
   app.get('/', function(req, res) {
     res.render('index.ejs');
   });
 
-  // app.post('/', do all our passport stuff here);
+  // process the login form
+	app.post('/login', passport.authenticate('local-login', {
+		successRedirect : '/worked', // redirect to the secure profile section
+		failureRedirect : '/login', // redirect back to the signup page if there is an error
+		// failureFlash : true // allow flash messages
+	}));
 
 
-//signup
+  //signup
   app.get('/signup', function(req, res) {
     res.render('signup.ejs');
   });
