@@ -5,6 +5,9 @@ var methodOverride = require('method-override');
 var app = express();
 var http = require('http').Server(app);
 var socketio = require('socket.io')(http);
+var passport = require('passport');
+var localStrategy = require('passport-local').Strategy;
+var bcrypt = require('bcrypt-nodejs');
 
 global.mongoose  = require('mongoose');
 

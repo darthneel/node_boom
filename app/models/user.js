@@ -5,3 +5,5 @@ var userSchema = mongoose.Schema({
   password: {type: String, required: true },
   favorite_songs: [songSchema]
 });
+
+module.exports = mongoose.model('User', userSchema);
