@@ -1,6 +1,6 @@
-var Elevatrapp = Elevatrapp || { Models: {}, Collections: {}, Views: {} };
+var Clientapp = Clientapp || { Models: {}, Collections: {}, Views: {} };
 
 Backbone.Model.prototype.idAttribute = "_id";
 
-Elevatrapp.Models.User = Backbone.Model.extend({
+Clientapp.Models.User = Backbone.Model.extend({
 });

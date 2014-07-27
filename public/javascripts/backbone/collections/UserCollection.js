@@ -1,7 +1,7 @@
-var Elevatrapp = Elevatrapp || { Models: {}, Collections: {}, Views: {} };
+var Clientapp = Clientapp || { Models: {}, Collections: {}, Views: {} };
 
 
-Elevatrapp.Collections.UserCollection = Backbone.Collection.extend({
-	model: Elevatrapp.Models.User,
+Clientapp.Collections.UserCollection = Backbone.Collection.extend({
+	model: Clientapp.Models.User,
 	url: '/api/users'
 })

@@ -1,7 +1,7 @@
-var Elevatrapp = Elevatrapp || { Models: {}, Collections: {}, Views: {} };
+var Clientapp = Clientapp || { Models: {}, Collections: {}, Views: {} };
 
 
-Elevatrapp.Collections.SongCollection = Backbone.Collection.extend({
-  model: Elevatrapp.Models.Song,
+Clientapp.Collections.SongCollection = Backbone.Collection.extend({
+  model: Clientapp.Models.Song,
   url: '/api/songs'
 })
