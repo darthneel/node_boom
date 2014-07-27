@@ -3,12 +3,12 @@ var songSchema = require(__dirname + '/models/song.js');
 
 // app/models/user.js
 // load the things we need
-var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 var bcrypt   = require('bcrypt-nodejs');
 
 // define the schema for our user model
 // User Schema
-var userSchema = mongoose.Schema({
+var userSchema = new Schema({
   username: {type: String, required: true, index: { unique: true } },
   email: {type: String, required: true, index: { unique: true } },
   password: {type: String, required: true },
