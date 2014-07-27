@@ -15,4 +15,4 @@ var roomSchema = new Schema({
 });
 
 // Export model
-module.exports = db.model('Room', roomSchema);
+module.exports = mongoose.model('Room', roomSchema);

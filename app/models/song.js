@@ -19,4 +19,4 @@ var songSchema = new Schema({
 });
 
 // Export model
-module.exports = db.model('Song', songSchema);
+module.exports = mongoose.model('Song', songSchema);

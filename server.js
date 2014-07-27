@@ -13,6 +13,7 @@ global.mongoose  = require('mongoose');
 
 //connect to database
 global.db = mongoose.connect('mongodb://localhost/boomroom');
+// app.User = require('./app/models/user.js');
 
 // passport for users
 var passport = require('passport');

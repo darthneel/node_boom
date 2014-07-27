@@ -1,4 +1,8 @@
 module.exports = function(app, passport) {
+  // load up models
+  var Room = require('./models/room.js');
+  var User = require('./models/user.js');
+  var Song = require('./models/song.js');
 
   // worked
   app.get('/worked', function(req, res) {
@@ -41,6 +45,30 @@ module.exports = function(app, passport) {
 		res.redirect('/');
 	});
 
+
+  // API Setup
+  // pull all rooms
+  app.post('/api/rooms', function(req, res) {
+    Room.find({}, function(err, rooms) {
+      res.send({ rooms: rooms });
+    });
+  });
+
+  // pull all users based on room id
+  app.post('/api/users/:id', function(req, res) {
+    var room_id = req.params.id;
+    Room.findOne({ '_id' : room_id }, 'users', function(err, users) {
+      res.send({ users: users });
+    });
+  });
+
+  // pull all songs based on room id
+  app.post('/api/songs/:id', function(req, res) {
+    var room_id = req.params.id;
+    Room.findOne({ '_id' : room_id }, 'songs', function(err, songs) {
+      res.send({ songs: songs });
+    });
+  });
 };
 
 // route middleware to make sure a user is logged in
