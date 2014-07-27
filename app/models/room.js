@@ -1,5 +1,11 @@
+var Schema = mongoose.Schema;
+
+// Require other Schema
+var songSchema = require(__dirname + '/models/song.js');
+var userSchema = require(__dirname + '/models/user.js');
+
 // Room Schema
-var roomSchema = mongoose.Schema({
+var roomSchema = new Schema({
   name: String,
   songs: [songSchema],
   users: [userSchema],

@@ -1,5 +1,7 @@
+var Schema = mongoose.Schema;
+
 // Song Schema
-var songSchema = mongoose.Schema({
+var songSchema = new Schema({
   title: String,
   artist: String,
   stream_url: String,
