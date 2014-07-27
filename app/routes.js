@@ -1,6 +1,6 @@
 module.exports = function(app, passport) {
 
-  //worked
+  // worked
   app.get('/worked', function(req, res) {
     if(req.user) {
       res.send('<h1> WORKED </h1><h2>' + req.user.email + '</h2>');
@@ -8,6 +8,7 @@ module.exports = function(app, passport) {
       res.send('<h1> WORKED </h1>');
     }
   });
+
 
   // login
   app.get('/', function(req, res) {
@@ -22,7 +23,7 @@ module.exports = function(app, passport) {
 	}));
 
 
-  //signup
+  // signup
   app.get('/signup', function(req, res) {
     res.render('signup.ejs');
   });
@@ -33,6 +34,12 @@ module.exports = function(app, passport) {
     // failureFlash : true // allow flash messages
 	}));
 
+
+  // logout
+  app.get('/logout', function(req, res) {
+		req.logout();
+		res.redirect('/');
+	});
 
 };
 
