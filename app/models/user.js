@@ -1,5 +1,5 @@
 // Require other Schema
-// var songSchema = require('song.js');
+var songSchema = require('./song.js');
 
 // app/models/user.js
 // load the things we need
@@ -12,7 +12,7 @@ var userSchema = new Schema({
   username: {type: String, required: true, index: { unique: true } },
   // email: {type: String, required: true, index: { unique: true } },
   password: {type: String, required: true },
-  // favorite_songs: [songSchema]
+  favorite_songs: [songSchema]
 });
 
 
