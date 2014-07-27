@@ -1,3 +1,4 @@
+// Require other Schema
 var songSchema = require(__dirname + '/models/song.js');
 
 // app/models/user.js
@@ -27,5 +28,4 @@ userSchema.methods.validPassword = function(password) {
 };
 
 // create the model for users and expose it to our app
-
 module.exports = db.model('User', userSchema);

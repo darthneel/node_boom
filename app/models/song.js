@@ -1,3 +1,4 @@
+// Instantiate mongoose Schema
 var Schema = mongoose.Schema;
 
 // Song Schema
@@ -17,4 +18,5 @@ var songSchema = new Schema({
   updated: { type: Date, default: Date.now }
 });
 
+// Export model
 module.exports = db.model('Song', songSchema);

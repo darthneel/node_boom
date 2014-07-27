@@ -1,3 +1,4 @@
+// Instantiate mongoose Schema
 var Schema = mongoose.Schema;
 
 // Require other Schema
@@ -13,4 +14,5 @@ var roomSchema = new Schema({
   updated: { type: Date, default: Date.now }
 });
 
+// Export model
 module.exports = db.model('Room', roomSchema);
