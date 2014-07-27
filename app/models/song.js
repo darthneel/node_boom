@@ -1,5 +1,8 @@
+// Instantiate mongoose Schema
+var Schema = mongoose.Schema;
+
 // Song Schema
-var songSchema = mongoose.Schema({
+var songSchema = new Schema({
   title: String,
   artist: String,
   stream_url: String,
@@ -15,4 +18,5 @@ var songSchema = mongoose.Schema({
   updated: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('Song', songSchema);
+// Export model
+module.exports = db.model('Song', songSchema);

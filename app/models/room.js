@@ -1,5 +1,12 @@
+// Instantiate mongoose Schema
+var Schema = mongoose.Schema;
+
+// Require other Schema
+var songSchema = require(__dirname + '/models/song.js');
+var userSchema = require(__dirname + '/models/user.js');
+
 // Room Schema
-var roomSchema = mongoose.Schema({
+var roomSchema = new Schema({
   name: String,
   songs: [songSchema],
   users: [userSchema],
@@ -7,4 +14,5 @@ var roomSchema = mongoose.Schema({
   updated: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('Room', roomSchema);
+// Export model
+module.exports = db.model('Room', roomSchema);
