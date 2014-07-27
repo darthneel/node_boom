@@ -1,5 +1,5 @@
 // Require other Schema
-// var songSchema = require('song.js');
+var songSchema = require('./song.js');
 
 // app/models/user.js
 // load the things we need
@@ -10,7 +10,7 @@ var bcrypt   = require('bcrypt-nodejs');
 // User Schema
 var userSchema = new Schema({
   username: {type: String, required: true, index: { unique: true } },
-  // email: {type: String, required: true, index: { unique: true } },
+  email: {type: String, required: true, index: { unique: true } },
   password: {type: String, required: true },
   // favorite_songs: [songSchema]
 });
