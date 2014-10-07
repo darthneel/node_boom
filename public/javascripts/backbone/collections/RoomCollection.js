@@ -1,7 +1,7 @@
-var Elevatrapp = Elevatrapp || { Models: {}, Collections: {}, Views: {} };
+var Clientapp = Clientapp || { Models: {}, Collections: {}, Views: {} };
 
 
-Elevatrapp.Collections.RoomCollection = Backbone.Collection.extend({
-  model: Elevatrapp.Models.Room,
+Clientapp.Collections.RoomCollection = Backbone.Collection.extend({
+  model: Clientapp.Models.Room,
   url: '/api/rooms'
 })

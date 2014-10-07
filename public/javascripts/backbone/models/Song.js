@@ -1,6 +1,6 @@
-var Elevatrapp = Elevatrapp || { Models: {}, Collections: {}, Views: {} };
+var Clientapp = Clientapp || { Models: {}, Collections: {}, Views: {} };
 
 Backbone.Model.prototype.idAttribute = "_id";
 
-Elevatrapp.Models.Song = Backbone.Model.extend({
+Clientapp.Models.Song = Backbone.Model.extend({
 });
